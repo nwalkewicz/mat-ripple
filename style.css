@@ -21,9 +21,10 @@ fieldset > * {
 	text-decoration: none;
 	color: inherit;
 	user-select: none;
-	transition: background-color 0.1s;
+	transition: background-color 0.1s, box-shadow 0.15s;
 }
-.btn:hover {
+.btn:hover,
+.btn:focus-visible {
 	background-color: hsl(0 0% 0% / 0.05);
 }
 
@@ -31,6 +32,9 @@ fieldset > * {
 	color: white;
 	background-color: #0048f4;
 	box-shadow: 0 2px 4px hsl(0 0% 0% / 0.42);
+}
+.btn.btn__raised:active {
+	box-shadow: 0 4px 12px hsl(0 0% 0% / 0.32);
 }
 
 .btn.btn__stroke {
