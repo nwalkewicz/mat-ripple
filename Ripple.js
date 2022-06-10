@@ -24,11 +24,7 @@ class Ripple {
 		this.#activeSince = new Date();
 		this.#removeBinded = this.#remove.bind(this);
 		this.#initializeStyles();
-		// requestAnimationFrame(e => {
-		// 	console.log(e);
-		// 	this.#rippleElem.classList.add('show');
-		// });
-		setTimeout(() => this.#rippleElem.classList.add('show'), 10);
+		requestAnimationFrame(() => this.#rippleElem.classList.add('show'));
 		if (!options.color) delete options.color;
 		this.#update({...DEFAULT_OPTIONS, ...options});
 		setTimeout(this.#removeBinded, this.timeout);
