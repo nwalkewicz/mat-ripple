@@ -23,6 +23,8 @@ rTargets.forEach(target => {
 			}
 		}
 
+		if (e.target.getAttribute('ripple-centered') !== null) rData.position = {x:e.target.offsetWidth / 2,y:e.target.offsetHeight / 2};
+
 		// Calculate pixel offset from center of element
 		const offsetX = Math.abs((e.target.offsetWidth / 2) - rData.position.x);
 		const offsetY = Math.abs((e.target.offsetHeight / 2) - rData.position.y);
