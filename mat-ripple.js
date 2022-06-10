@@ -1,4 +1,4 @@
-import Ripple from '/Ripple.js';
+import Ripple from './Ripple.js';
 
 const rTargets = document.querySelectorAll('[ripple]');
 	
