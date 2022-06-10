@@ -3,6 +3,7 @@ import Ripple from './Ripple.js';
 const rTargets = document.querySelectorAll('[ripple]');
 	
 function readyToRemove(e, ripple) {
+	if (!ripple) return;
 	if (e.target.getAttribute('ripple') === null) return false;
 	return ripple.readyToRemove = true;
 }

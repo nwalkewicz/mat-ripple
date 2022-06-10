@@ -1,3 +1,12 @@
+fieldset {
+	display: flex;
+	flex-direction: column;
+	gap: 12px;
+}
+fieldset > * {
+	width: fit-content;
+}
+
 .btn {
 	height: 40px;
 	font-family: 'Inter';
@@ -7,10 +16,23 @@
 	border-radius: 4px;
 	background-color: transparent;
 	cursor: pointer;
+	display: inline flex;
+	align-items: center;
+	text-decoration: none;
+	color: inherit;
+	user-select: none;
+	transition: background-color 0.1s;
+}
+.btn:hover {
+	background-color: hsl(0 0% 0% / 0.05);
 }
 
 .btn.btn__raised {
 	color: white;
 	background-color: #0048f4;
 	box-shadow: 0 2px 4px hsl(0 0% 0% / 0.42);
+}
+
+.btn.btn__stroke {
+	border: 1px solid hsl(0 0% 0% / 0.1);
 }
