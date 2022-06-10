@@ -1,0 +1,16 @@
+.btn {
+	height: 40px;
+	font-family: 'Inter';
+	font-size: 18px;
+	border: none;
+	padding-inline: 16px;
+	border-radius: 4px;
+	background-color: transparent;
+	cursor: pointer;
+}
+
+.btn.btn__raised {
+	color: white;
+	background-color: #0048f4;
+	box-shadow: 0 2px 4px hsl(0 0% 0% / 0.42);
+}

@@ -1,0 +1,21 @@
+[ripple] {
+	overflow: hidden;
+	position: relative!important;
+}
+
+.rippleElem {
+	pointer-events: none;
+	position: absolute;
+	border-radius: 50%;
+	transform: scale(0);
+	transition: transform 0.5s cubic-bezier(0, .5, .1, 1);
+}
+
+.rippleElem.show {
+	transform: scale(1);
+}
+
+.rippleElem.show.fadeOut {
+	transition: opacity 0.5s;
+	opacity: 0;
+}
