@@ -25,7 +25,8 @@ rTargets.forEach(target => {
 		
 		// Set color
 		rData.color = e.target.getAttribute('ripple-color') || undefined;
-
+    
+		// Handle icons
 		if (e.target.getAttribute('ripple-icon') !== null) {
 			rData.position = {x:e.target.offsetWidth / 2,y:e.target.offsetHeight / 2}
 			rData.size = Math.max.apply(null, [e.target.offsetWidth, e.target.offsetHeight]) * 1.25;
@@ -40,12 +41,7 @@ rTargets.forEach(target => {
 		
 		// Set size based on element hypotenuse & pixel offset
 		rData.size = Math.hypot(e.target.offsetWidth, e.target.offsetHeight) + (offsetH * 2);
-		
-		// Or if minsize is declared, use width as total radius
-		if (e.target.getAttribute('ripple-minsize')) {
-			rData.size = e.target.offsetWidth;
-		};
-
+    
 		// Create ripple
 		ripple = new Ripple({target, ...rData});
 	});
