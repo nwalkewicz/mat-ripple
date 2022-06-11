@@ -19,7 +19,7 @@ This effect was specifically made for `<button>` and `<a>` elements, but I'm sur
 
 To apply the ripple effect to an element, simply add the `ripple` attribute:
 <pre>
-&lt;button <b>ripple</b>&gt;Click Me&lt;/button&gt;
+&lt;button  <b>ripple class="myBtn"</b>&gt;Click Me&lt;/button&gt;
 </pre>
 
 To set the ripple's color, define the following rule in your CSS:
