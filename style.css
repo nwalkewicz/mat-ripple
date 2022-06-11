@@ -49,8 +49,14 @@ legend {
 	color: inherit;
 	user-select: none;
 	transition: background-color 0.1s, box-shadow 0.15s;
+	-webkit-tap-highlight-color: transparent;
 }
-.btn:hover,
+
+@media (hover) {
+	.btn:hover {
+		background-color: hsl(0 0% 0% / 0.05);
+	}
+}
 .btn:focus-visible {
 	background-color: hsl(0 0% 0% / 0.05);
 }
