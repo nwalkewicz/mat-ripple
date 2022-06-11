@@ -22,19 +22,25 @@ rTargets.forEach(target => {
 				y: e.layerY
 			}
 		}
+		
+		// Set color
+		rData.color = e.target.getAttribute('ripple-color') || undefined;
 
-		if (e.target.getAttribute('ripple-centered') !== null) rData.position = {x:e.target.offsetWidth / 2,y:e.target.offsetHeight / 2};
-
+		// Handle icons
+		if (e.target.getAttribute('ripple-icon') !== null) {
+			rData.position = {x:e.target.offsetWidth / 2,y:e.target.offsetHeight / 2}
+			rData.size = Math.max.apply(null, [e.target.offsetWidth, e.target.offsetHeight]) * 1.25;
+			rData.timeout = 200;
+			return ripple = new Ripple({target, ...rData});
+		};
+		
 		// Calculate pixel offset from center of element
 		const offsetX = Math.abs((e.target.offsetWidth / 2) - rData.position.x);
 		const offsetY = Math.abs((e.target.offsetHeight / 2) - rData.position.y);
 		const offsetH = Math.hypot(offsetX, offsetY);
-
+		
 		// Set size based on element hypotenuse & pixel offset
 		rData.size = Math.hypot(e.target.offsetWidth, e.target.offsetHeight) + (offsetH * 2);
-
-		// Set color
-		rData.color = e.target.getAttribute('ripple-color') || undefined;
 
 		// Create ripple
 		ripple = new Ripple({target, ...rData});

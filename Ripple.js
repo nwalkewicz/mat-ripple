@@ -1,6 +1,5 @@
 const DEFAULT_OPTIONS = {
 	size: 100,
-	color: 'hsl(0 0% 0% / 0.1)',
 	position: {
 		x: 0,
 		y: 0
@@ -32,10 +31,6 @@ class Ripple {
 
 	set target(target) {
 		target.append(this.#rippleElem);
-	}
-
-	set color(value) {
-		this.#rippleElem.style.backgroundColor = value;
 	}
 
 	set size(value) {
