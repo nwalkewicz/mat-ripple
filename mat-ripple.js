@@ -10,6 +10,10 @@ function readyToRemove(e, ripple) {
 
 rTargets.forEach(target => {
 	let ripple;
+
+	target.addEventListener('contextmenu', e => {
+		if (e.target.nodeName !== 'A') e.preventDefault();
+	});
 	
 	target.addEventListener('pointerdown', e => {
 		// Filter out child elements
