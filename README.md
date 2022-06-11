@@ -1,6 +1,8 @@
 # mat-ripple
 [Material Design ripple effect](https://v10.material.angular.io/components/ripple/examples) made in vanilla JavaScript.
 
+![Demo](https://raw.githubusercontent.com/nwalkewicz/mat-ripple/master/demo.gif)
+
 ## Table of Contents
 - [Installation](#installation)
 - [Usage](#usage)
