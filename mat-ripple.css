@@ -3,13 +3,17 @@
 	position: relative!important;
 }
 
+[ripple] * {
+	pointer-events: none;
+	user-select: none;
+}
+
 .rippleElem {
 	pointer-events: none;
 	position: absolute;
 	border-radius: 50%;
 	transform: scale(0);
 	transition: transform 0.5s cubic-bezier(0, .5, .1, 1);
-	background-color: hsl(0 0% 0% / 0.1);
 }
 
 .rippleElem.show {
